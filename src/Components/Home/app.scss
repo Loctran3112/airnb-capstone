@@ -1,0 +1,674 @@
+#myHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  background-color: blueviolet;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .headerContent {
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .myLogo {
+      h1 {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 30px;
+      }
+    }
+    .myMenu {
+      margin-right: 30px;
+      ul {
+        display: flex;
+        gap: 20px;
+        li {
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+          span {
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+              color: orangered;
+            }
+          }
+        }
+      }
+    }
+    .myBar {
+      display: none;
+      i {
+        font-size: 18px;
+        color: white;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+#mySearch {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  i {
+    position: absolute;
+    left: 5px;
+  }
+  input {
+    width: 400px;
+    height: 32px;
+    padding: 0 10px 0 30px;
+    border-bottom: 2px solid orangered;
+    outline: none;
+  }
+  p {
+    text-align: center;
+    margin-top: 10px;
+    color: blueviolet;
+  }
+}
+
+#myContent {
+  max-width: 1200px;
+  min-height: calc(100vh - 200px);
+  margin: 0 auto;
+  // padding: 30px;
+  .item {
+    background-color: rgb(248, 248, 248);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 30px;
+    padding: 30px;
+    cursor: pointer;
+    img {
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 30px;
+      font-weight: 600;
+      color: orangered;
+    }
+    p {
+      color: blueviolet;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+    .myBtn {
+      margin: 20px auto 0;
+      background-color: orangered;
+      color: white;
+      height: 30px;
+      width: 150px;
+      text-align: center;
+    }
+    .moRong {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      button {
+        width: 400px;
+        height: 40px;
+        // border-radius: 8px;
+        // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+        &:hover {
+          background-color: blueviolet;
+        }
+      }
+      button.active {
+        background-color: blueviolet;
+        transition: all 0.3s;
+        &:hover {
+          background-color: orangered;
+        }
+      }
+      .chiTiet {
+        max-width: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        .chiTietContent {
+          width: 400px;
+          padding: 20px;
+          .inputItem {
+            margin-bottom: 10px;
+            input {
+              width: 100%;
+              height: 32px;
+            }
+            button {
+              background-color: blueviolet;
+              color: white;
+              height: 32px;
+              width: 100%;
+              transition: all 0.3s;
+              &:hover {
+                background-color: orangered;
+              }
+            }
+            .alert {
+              span {
+                color: silver;
+                font-size: 14px;
+                font-weight: 400;
+                text-align: center;
+                display: block;
+              }
+              h1 {
+                color: white;
+                background-color: blueviolet;
+                font-size: 14px;
+                font-weight: 500;
+                border: 1px solid silver;
+                height: 32px;
+                line-height: 32px;
+                transition: all 0.3s;
+                margin-top: 5px;
+                &:hover {
+                  background-color: orangered;
+                }
+              }
+              h1.dangKy {
+                font-size: 14px;
+                color: orangered;
+                border: none;
+                background-color: transparent;
+              }
+            }
+          }
+          h1 {
+            text-align: center;
+            color: blueviolet;
+            margin: 0 0 20px;
+          }
+          p {
+            color: orangered;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: right;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            thead {
+              th {
+                text-align: left;
+                background-color: blueviolet;
+                color: white;
+                padding: 5px 10px;
+                font-weight: 500;
+              }
+            }
+            tbody {
+              tr {
+                &:nth-child(even) {
+                  background-color: rgba(245, 245, 245, 0.3);
+                }
+                td {
+                  padding: 5px 10px;
+                  border-bottom: 1px solid rgb(220, 220, 220);
+                  &:nth-child(odd) {
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .binhLuan {
+        max-height: 500px;
+        overflow: scroll;
+        .binhLuanContent {
+          padding: 10px 20px 10px;
+          .nguoiDung {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              font-size: 12px;
+              color: silver;
+            }
+          }
+          .danhGia {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span:first-child {
+              max-width: 260px;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            .star-rating {
+              display: inline-block;
+              font-size: 16px;
+            }
+
+            .star-rating::before {
+              content: "\2605"; /* Ngôi sao Unicode */
+              color: orangered; /* Màu sắc của ngôi sao */
+            }
+
+            /* Các class tương ứng với số sao */
+            .star-rating.star-1::before {
+              content: "\2605";
+            }
+            .star-rating.star-2::before {
+              content: "\2605\2605";
+            }
+            .star-rating.star-3::before {
+              content: "\2605\2605\2605";
+            }
+            .star-rating.star-4::before {
+              content: "\2605\2605\2605\2605";
+            }
+            .star-rating.star-5::before {
+              content: "\2605\2605\2605\2605\2605";
+            }
+          }
+        }
+      }
+      .hidden {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+#formDangNhap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  z-index: 101;
+
+  form {
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    .inputItem {
+      margin-bottom: 10px;
+      border-bottom: 1px solid blueviolet;
+      position: relative;
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+      }
+      span.matKhau {
+        position: absolute;
+        top: 5px;
+        right: 0;
+
+        i {
+          color: silver;
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 32px;
+        background-color: blueviolet;
+        color: white;
+        transition: all 0.3s;
+        &:hover {
+          background-color: orangered;
+        }
+      }
+    }
+    button {
+      text-align: center;
+      &.secondary {
+        color: orangered;
+        transition: all 0.3s;
+        &:hover {
+          color: blueviolet;
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+      color: blueviolet;
+      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: orangered;
+      cursor: pointer;
+    }
+    p {
+      font-size: 12px;
+      color: orangered;
+      margin-bottom: 6px;
+      text-align: right;
+    }
+  }
+}
+
+#formDangKy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  z-index: 102;
+
+  form {
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    .inputItem {
+      margin-bottom: 3px;
+      border-bottom: 1px solid blueviolet;
+      position: relative;
+
+      select {
+        border: none;
+        width: 100%;
+        background-color: transparent;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+      }
+      span.matKhau {
+        position: absolute;
+        top: 5px;
+        right: 0;
+
+        i {
+          color: silver;
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 32px;
+        background-color: blueviolet;
+        color: white;
+        transition: all 0.3s;
+        &:hover {
+          background-color: orangered;
+        }
+      }
+    }
+    .gioiTinh {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid blueviolet;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      color: orangered;
+      margin-bottom: 6px;
+      text-align: right;
+    }
+    button {
+      text-align: center;
+      &.secondary {
+        color: orangered;
+        transition: all 0.3s;
+        &:hover {
+          color: blueviolet;
+        }
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: blueviolet;
+      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: orangered;
+      cursor: pointer;
+    }
+  }
+}
+
+#thongTinDatPhong {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(248, 248, 248);
+  text-align: center;
+  z-index: 103;
+  button.myBtn {
+    margin: 20px 0;
+    transition: all 0.5s;
+    &:hover {
+      color: orangered;
+    }
+    i {
+      font-size: 12px;
+      color: orangered;
+    }
+  }
+  .datPhongContent {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    .datPhongItem {
+      width: 380px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: white;
+      border: 1px solid orangered;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+      h1 {
+        color: blueviolet;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        &.soLuong {
+          color: silver;
+          font-weight: 300;
+        }
+      }
+      p {
+        color: orangered;
+      }
+      form.danhGia {
+        textarea {
+          width: 100%;
+        }
+        input {
+          height: 30px;
+          width: 100%;
+          margin: 5px 0;
+        }
+        button {
+          background-color: orangered;
+          color: white;
+          padding: 5px 10px;
+          width: 100%;
+        }
+      }
+      .commentXoaSua {
+        border-top: 1px solid silver;
+        padding: 10px 0;
+        span {
+          font-size: 18px;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+      }
+      .xoaDatPhong {
+        i {
+          color: orangered;
+          font-size: 18px;
+        }
+      }
+      .suaDatPhong {
+        i {
+          color: blue;
+          font-size: 18px;
+        }
+      }
+      .danhGiaDatPhong {
+        i {
+          color: blue;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+#admin {
+  text-align: center;
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(60, 55, 55);
+    width: 220px;
+    color: white;
+    p.adminInfo {
+      text-align: center;
+      color: orangered;
+      padding: 20px 0;
+      border-bottom: 1px solid silver;
+      i {
+        margin-left: 30px;
+        color: white;
+      }
+    }
+    div {
+      margin-top: 20px;
+      ul {
+        li {
+          padding: 10px 10px 10px 20px;
+          text-align: left;
+          &.active {
+            background-color: orangered;
+          }
+        }
+      }
+    }
+  }
+  #danhSachNguoiDung,
+  #danhSachBinhLuan,
+  #danhSachCanHo {
+    margin-left: 220px;
+    cursor: pointer;
+  }
+  .myTable {
+    table {
+      margin: 0 auto;
+      thead {
+        tr {
+          th {
+            background-color: blueviolet;
+            color: white;
+            padding: 5px 10px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          border-bottom: 1px solid silver;
+
+          &:nth-child(even) {
+            background-color: rgb(248, 248, 248);
+          }
+          td {
+            padding: 5px 10px;
+            text-align: left;
+            i {
+              color: red;
+              font-size: 18px;
+            }
+            &:last-child {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  img {
+    height: 260px;
+  }
+  #myHeader {
+    .headerContent {
+      width: 100%;
+      background-color: orangered;
+      .myMenu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 110;
+        width: 100%;
+        ul {
+          flex-direction: column;
+          background-color: whitesmoke;
+          padding: 20px;
+          li {
+            color: blue;
+          }
+        }
+      }
+
+      .myBar {
+        display: block;
+        font-size: 30px;
+      }
+    }
+  }
+}
